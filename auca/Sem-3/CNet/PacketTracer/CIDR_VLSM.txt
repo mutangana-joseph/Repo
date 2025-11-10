@@ -1,0 +1,137 @@
+===================================================
+DEVICE: Router0
+===================================================
+enable
+conf t
+hostname Router0
+
+interface fa0/0
+ ip address 192.168.10.1 255.255.255.240
+ no shut
+
+interface fa1/0
+ ip address 192.168.10.17 255.255.255.240
+ no shut
+
+interface se2/0
+ ip address 192.168.10.33 255.255.255.240
+ no shut
+
+interface se3/0
+ ip address 192.168.10.81 255.255.255.240
+ no shut
+
+===================================================
+DEVICE: ROUTER0 STATIC ROUTER
+===================================================
+
+ip route 192.168.10.48 255.255.255.240 192.168.10.34
+ip route 192.168.10.64 255.255.255.240 192.168.10.34
+ip route 192.168.10.96 255.255.255.240 192.168.10.82
+
+===================================================
+DEVICE: ROUTER1 
+===================================================enable
+conf t
+hostname Router1
+
+interface fa0/0
+ ip address 192.168.10.49 255.255.255.240
+ no shut
+
+interface fa1/0
+ ip address 192.168.10.65 255.255.255.240
+ no shut
+
+interface se2/0
+ ip address 192.168.10.34 255.255.255.240
+ no shut
+
+interface se3/0
+ ip address 192.168.10.113 255.255.255.240
+ no shut
+===================================================
+DEVICE: ROUTER1 STATIC ROUTER
+===================================================
+ip route 192.168.10.0 255.255.255.240 192.168.10.33
+ip route 192.168.10.16 255.255.255.240 192.168.10.33
+ip route 192.168.10.96 255.255.255.240 192.168.10.114
+
+===================================================
+DEVICE: Router2
+===================================================
+enable
+conf t
+hostname Router2
+
+interface fa0/0
+ ip address 192.168.10.97 255.255.255.240
+ no shut
+
+interface se3/0
+ ip address 192.168.10.82 255.255.255.240
+ no shut
+
+interface se2/0
+ ip address 192.168.10.114 255.255.255.240
+ no shut
+
+===================================================
+DEVICE: ROUTER2 STATIC ROUTER
+===================================================
+
+ip route 192.168.10.0 255.255.255.240 192.168.10.81
+ip route 192.168.10.16 255.255.255.240 192.168.10.81
+ip route 192.168.10.48 255.255.255.240 192.168.10.113
+ip route 192.168.10.64 255.255.255.240 192.168.10.113
+
+===================================================
+DEVICE: ALL SWITCHE's
+===================================================
+vlan 10
+name PCs_Group1
+vlan 20
+name PCs_Group2
+vlan 30
+name PCs_Group3
+vlan 40
+name PCs_Group4
+
+exit
+
+===================================================
+DEVICE: SWITCH0
+===================================================
+enable
+conf t
+interface range fa0/1 - 2
+ switchport mode access
+ switchport access vlan 10
+
+===================================================
+DEVICE: SWITCH1
+===================================================
+enable
+conf t
+interface range fa0/2 - 3
+ switchport mode access
+ switchport access vlan 20
+
+===================================================
+DEVICE: SWITCH2
+===================================================
+enable
+conf t
+interface range fa0/1 - 2
+ switchport mode access
+ switchport access vlan 30
+
+===================================================
+DEVICE: SWITCH3
+===================================================
+enable
+conf t
+interface range fa0/2 - 3
+ switchport mode access
+ switchport access vlan 40
+

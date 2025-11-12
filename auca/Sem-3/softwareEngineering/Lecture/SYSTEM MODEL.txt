@@ -1,0 +1,38 @@
+                                  SYSTEM MODEL
+                              ====================
+
+System Model: Is an abstract representation of the system project. It contains Context model and behavior model.
+-------------
+
+Context model: Shows a system with it's subsystem without their functionality or behavior of the system.
+--------------
+
+Behavior Model: Shows the behavior of the system under application of external events.
+--------------- Shows the dynamic, characteristics, and functionality of the system.
+
+Behavior model contains: 1. Data flow model
+------------------------ 2. State model: Shows behave of machine under application events.
+
+Data model: It's a model representing a system with a huge of amount of data(big data).
+-----------
+
+Big data contains 5 Vs: 1. Volume : Amount data are being produced.
+----------------------- 2. Velocity: Data are generated with high speed.
+                        3. Variety : Different types of data, (Structured and unstructured data).
+                        4. Veracity: Reliability and authenticity of data.
+                        5. Value : usefulness of the data. Our data has a value.
+
+
+
+                                   UML DIAGRAM
+                              ====================
+
+UML Stands for "Unified Modeling Language": It is an industry-standard graphical language for specifying, visualizing, contracting, and document the artfacts of software system.
+
+UML Modeling contains  -Structural: Static features
+                       -Behavioral: dynamic feature
+                       -Architectural: Blue print feature of entire system
+
+Structural and behavioral give architectural diagram
+
+

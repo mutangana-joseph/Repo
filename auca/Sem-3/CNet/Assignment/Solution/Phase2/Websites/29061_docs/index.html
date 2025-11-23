@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>29061_docs</title>
+</head>
+<body id="home">
+    <!-- #Section Header -->
+    <section class="header">
+        <a href="#" target="_blank"><button type="button">F25</button></a>
+        <div class="header_title">
+            <div class="title">CNET-F25 Final Project 29061</div>
+            <div class="description">
+                Network & System Admin Documentation & Evidence Portal
+            </div>
+        </div>
+        <div class="open_docs">
+        <a href="#" target="_blank"><input type="button" value="Open Docs"></a>
+    </div>
+    </section>
+    <!-- Main Section -->
+    <section class="main">
+        <div class="nav">
+            <div class="nav_header">
+                <a href="#" target="_blank"><button type="button">S</button></a>
+                <div class="nav_title">
+                    <div class="title">29061</div>
+                    <div class="nav_description">Course: Network Systems Final Project</div>
+                </div>
+            </div>
+            <div class="nav_links">
+            <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#win_server">Window_Server_AD/GPO</a></li>
+            <li><a href="#linux_server">Linux_Server</a></li>
+            <li><a href="#pfsense">PfSense_Firewall</a></li>
+            <li><a href="#vpn">VPN_(OpenVPN)</a></li>
+            <li><a href="#wazuh">Wazuh_Server</a></li>
+            <li><a href="#aduc">Active_Directory</a></li>
+            <li><a href="#ids">IDS_Suricata</a></li>
+            <li><a href="#kali">Kali</a></li>
+            <li><a href="#ntopng">Monitoring_Network_Traffic_With_NTOPng</a></li>
+            <li><a href="#firewall">FireWall_&_Web_Filtering</a></li>
+            <li><a href="#backup">Authomated_Backup_&_Restore_Of_pfSense</a></li>
+            <li><a href="#Summary">Summary</a></li>
+            </ul>
+            </div>
+        </div>
+
+        <div class="main_body" >
+            <!-- Home tab -->
+            <div class="home" id="">
+                <div class="home1">
+                <div class="home_header">
+                    <ul >
+                    <li id="overview">Overview</li>
+                    <li  id="topology">Topology</li>
+                    <li id="ip_table">IP Table</li>
+                </ul>
+                </div>
+                <div class="home_executive_summary">
+                    <h1>Executive Summary</h1>
+                    <div class="description">
+                        This Documentation Portial covers the full final project for 29061. 
+                        Use the tabs on left to navigate each page contains step-by-step.
+                    </div>
+                    <div class="home_flex">
+                        <div class="video_link">
+                            <h2>Project Video Demonstartion (Google Drive Link)</h2>
+                            <div class="drive_link">https://www.googledrive</div>
+                        </div>
+                    <div class="topology" >
+                        <h1>Topology Diagram</h1>
+                        <img src="topology.png" alt="topology Diagram" id="topology">
+                    </div>
+                </div>
+                </div>
+            </div>
+            
+            <div class="ip_allocation">
+                <h1>IP Allocation</h1>
+                <div class="allocation">
+                <div class="network">
+                    <h1>Network</h1>
+                    <li>LAN1</li>
+                    <li>LAN2</li>
+                    </div>
+                    <div class="name">
+                        <h1>Name</h1>
+                        <li>29061_LAN1</li>
+                        <li>29061_LAN2</li>
+                    </div>
+                    <div class="subnet">
+                        <h1>Subnet</h1>
+                        <li>192.168.1.0/29</li>
+                        <li>192.168.2.0/29</li>
+                    </div>
+                    <div class="gateway">
+                        <h1>Gateway</h1>
+                        <li>192.168.1.1</li>
+                        <li>192.168.2.1</li>
+                    </div>
+                    <div class="dhcp" >
+                        <h1>DHCP</h1>
+                        <li>Linux_Docs_Server</li>
+                        <li>pfSense</li>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- #Window Server tab -->
+        <div class="win_server" id="win_server">
+           <div class="aduc" id="aduc">
+            <h1>Active Directories Users and Computers - ADUC</h1>
+            <p>In this configuration, I created Active directories for IT,
+                HR, Fiance, and Student as active directory.
+            I also added some users in each directory, so later I can join some client and log in as one of user I created.
+            </p>
+
+            <div class="aduc_flex">
+                <div class="ad">
+                    <h2>Active Directory</h2>
+                    <li>IT</li>
+                    <li>HR</li>
+                    <li>Finance</li>
+                    <li>Students</li>
+                    <img src="aduc.png" alt="Active directory-image" >
+                </div>
+
+                <div class="user">
+                    <h2>Users</h2>
+                    <li>IT1, IT2</li>
+                    <li>HR1, HR2</li>
+                    <li>FIN1</li>
+                    <li>ST1</li>  
+                    <img src="ou_users.png" alt="img of users in active directory">
+                </div>
+
+            </div>
+           </div>
+           <div class="gpo">
+            <h1>Group Policy</h1>
+            <p>Group Policy has configured on this LAB for purpose of security, such as lockaout account after failing schedured times and 
+                user will change password on each login.
+            </p>
+            <div class="gpo_list">
+                <img src="gpo.png" alt="gpo-list-img">
+            </div>
+
+           </div>
+           <div class="mapped_drive">
+            <h1>Mapped-Drive</h1>
+            <p>On window server, mappeddrive configured, so that each joined PC/Client will 
+                have access to the drive created from server.</p>
+                <img src="mapeddrive.png" alt="mapped-drive-image">
+           </div>
+           <div class="iis">
+            <h1>IIS</h1>
+            <p>IIS installed on Window server it helped to host my portfolio webapge on server,
+                 so clients and users can access the webapage by browsing.</p>
+                 <img src="portfolio.png" alt="portfolio-image-from browser">
+           </div>
+           <div class="roaming">
+            <h1>Roaming/Mapped Folder</h1>
+            <p>Roaming, this was folder created aiming to follow each user, so where he/she logged on any PC/Client, 
+                the folder was linked to his profile so that any PC user join, the folder will be there.</p>
+                <img src="roaming.png" alt="roaming-mapped-folder-img">
+           </div>
+        </div>
+        <!-- Linux Server Tab -->
+        <div class="linux_server" id="linux_server">
+            <h1>Linux Server</h1>
+            <p>Ubuntu live server was installed on this LAB, it's purpose is to provide the DHCP 
+                IP address to PC/Clients that are coonnected on LAN21(192.168.1.1), this doen by installing isc-dhcp-server.
+            Apache and nginx installed on Linux Server/ubuntu live server, 
+            so that I can be able to host documantaion website on Linux Server</p>
+            <div class="code">
+                # subnet 192.168.1.0/290
+                <br>
+                subnet 192.168.1.0 netmask 255.255.255.248{
+                    <br>
+                     range 192.168.1.2 192.168.1.6
+                    <br>
+                    option routers 192.168.1.1;
+                }
+            </div>
+            <div class="doc_url">
+                <h1>Documentation Site Link</h1>
+                <p><a href="http://docs.29061.f25">http://docs.29061.f25</a></p>
+            </div>
+        </div>
+        <!-- pfSense Tab -->
+         <div class="pfsense" id="pfsense">
+            <h1>pfSense</h1>
+            <p>PfSense: This device Helped fo setting up Interfaces and provide an 
+                IP address on Clients connected to 29061-LAN2 via DHCP. Moreover, Pfsense used to set rules
+                 and schedules that govern this LAB</p>
+                 <div class="interface">
+                    <h1>Interface IP address</h1>
+                    <p>These are IP of the interface on pfSense</p>
+                    <div class="interface_flex">
+                        <div class="lan1">
+                            <h4>29061_LAN1 Interface(lan, em2)</h1>
+                            <img src="lan1ip.png" alt="29061_LAN1 Interface(lan, em2) IP">
+                        </div>
+                        <div class="lan2">
+                            <h4>29061_LAN2 Interface(lan, em1)</h1>
+                            <img src="lan2ip.png" alt="29061_LAN2 Interface(lan, em2) IP">
+                        </div>
+                    </div>
+                 </div>
+                 <div class="dhcp" id="dhcp">
+                    <h1>DHCP POOL 29061-LAN2</h1>
+                    <p>pfSense Used Dynamic host Configuration Protocal To privide IP address on Cleint Dynamically.
+                        Belowe is the Image showing the DHCP network usable IPs, and IPs range.
+                    </p>
+                    <img src="lan2dhcp.png" alt="DHCP POOL 29061-LAN2-IMG.png">
+                 </div>
+                 <div class="firewall_rules">
+                    <h1>Firewall Rules and Schedules</h1>
+                    <p>pfSense used Firewall rules, to govern how both lan interact 
+                        each other, morever hw the access internet. On other side, 
+                        firewall schedule, 
+                        helped to schedule how often the device
+                         will have access some features, 
+                         to give permission at specific time. Below are images showing that.</p>
+                        <div class="firewall_flex">
+                            <div class="rules">
+                                <h4>Rules</h4>
+                                <img src="lan1rule.png" alt="lan1rule.png">
+                            </div>
+                            <div class="schedule">
+                                <h4>Schedules</h4>
+                                <img src="schedules.png" alt="schedules.png">
+                            </div>
+                        </div>
+                 </div>
+                
+                 <div class="wazu_manager">
+                    <h1>Wazuh Manager </h1>
+                    <p>On Wazuh Server there is Wazuh manager Showing incoming pfSense Syslogs entries</p>
+                    <img src="" alt="wazuh_manager">
+                 </div>
+
+         </div>
+         <!-- ntopng tab -->
+        <div class="ntopng" id="ntopng">
+            <h1>NTOPng Dashboard</h1>
+            <p>NTOPng was installed on pfSense packages to monitor network traffic</p>
+            <img src="" alt="ntopng_dashboard.png">
+        </div>
+        <!-- backup tab -->
+        <div class="backup" id="backup">
+            <h1>Backup And Restore</h1>
+            <p>A file Config.xml created to store data on pfSense</p>
+            <img src="" alt="config.png">
+        </div>
+        </div>
+    </section>
+    
+</body>
+</html>

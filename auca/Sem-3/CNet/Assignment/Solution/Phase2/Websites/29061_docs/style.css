@@ -48,11 +48,17 @@ body{
     border-bottom: solid black;
 }
 
-.header a button{
+.header  button{
     background-color: var(--button-bgcolor);
     border: none;
     padding: 12px;
     border-radius: 8px;
+}
+
+.header button:hover {
+    background-color: blue;
+    color: white;
+    transition: 1s;
 }
 
 .header .open_docs{
@@ -293,14 +299,14 @@ body{
     list-style: none;
 }
 
-.linux_server .code{
+.linux_server .code, .linux_server p, .wazuh .code{
     background-color: var(--main-body_bgcolor);
     padding: var(--tab-padding);
     border-radius: var(--border-radius);
     color: rgba(78, 145, 179, 0.466);
 }
 
-.linux_server a {
+.linux_server a, h5{
    text-decoration: none;
    color: var(--tex-color)
 }
@@ -332,6 +338,7 @@ body{
         }
     .header {
         gap: 1rem;
+        padding-bottom: 3rem;
     }
 
     .header .open_docs input{
@@ -342,7 +349,7 @@ body{
         display: flex;
         flex-direction: column;
         margin-top: 10px;
-        margin:auto;
+        margin:0 auto;
         padding-left: 10px;
         
     }
@@ -352,23 +359,19 @@ body{
     .main .nav {
         height: auto;
         position: fixed;
-        margin-top: -20px;
-        width: 73%;
-        margin-left: 2rem;
+        margin-top: -60px;
+        width: 94%;
+        margin-left: -15px;
+        background-color: var(--dark-color);
     
     }
     .main .nav .nav_header {
            display: none;
         }
-    .main .main_body .home ul li {
-        padding:2px 0;
-        border-radius: 9px;  
-       
-    }
+    
     .main .nav .nav_links ul {
         display: flex;
         flex-direction: row;
-
         font-size: 8px;
         gap: 2.4rem;
     }
@@ -379,8 +382,9 @@ body{
             color: white;
         }
         .nav .nav_links ul li a{
-           border-bottom: solid var(--button-bgcolor);
-            color: white;
+            background-color: rgb(72, 86, 99);
+            padding: 2px 9px;
+            border-radius: 5px;
         }
     
         .nav .nav_links ul li:hover {
@@ -399,7 +403,7 @@ body{
                 .kali,
                 .firewall,
                 .summary{
-            width: 430px;
+            width: 535px;
                 }
         .main .main_body .home .home_executive_summary .home_flex, .aduc_flex{
             display: flex;

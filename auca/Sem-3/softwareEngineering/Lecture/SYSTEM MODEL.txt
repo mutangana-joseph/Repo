@@ -10,8 +10,8 @@ Context model: Shows a system with it's subsystem without their functionality or
 Behavior Model: Shows the behavior of the system under application of external events.
 --------------- Shows the dynamic, characteristics, and functionality of the system.
 
-Behavior model contains: 1. Data flow model
------------------------- 2. State model: Shows behave of machine under application events.
+Behavior model contains: 1. Data flow model 
+------------------------ 2. State model: Shows behave of machine under application events. 
 
 Data model: It's a model representing a system with a huge of amount of data(big data).
 ---

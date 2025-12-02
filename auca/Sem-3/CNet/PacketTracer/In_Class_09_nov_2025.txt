@@ -13,8 +13,8 @@ no sh
 ! ------------------------
 
 router rip
-Network 200.200.200.0
-network 192.168.10.0
+network 192.168.20.0
+network 192.168.30.0
 
 -----------------------------
 Router 2
@@ -37,9 +37,6 @@ no sh
 ! ------------------------
 
 router rip
-Network 200.200.200.0
-network 100.100.100.0
-network 192.168.20.0
 network 192.168.30.0
 network 192.168.10.0
 
@@ -59,8 +56,6 @@ no sh
 ! ------------------------
 
 router rip
-Network 100.100.100.0
-network 192.168.30.0
 network 192.168.20.0
 network 192.168.10.0
 

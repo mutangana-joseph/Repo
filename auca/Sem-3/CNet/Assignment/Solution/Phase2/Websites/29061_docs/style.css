@@ -13,19 +13,6 @@
     --tab-width: 865px;
     --tab-margin: 12px;
 }
-img:hover{
-   
-    cursor: all-scroll;
-    transform: scale(2);
-    transition: 3s;
-    position: absolute;
-    width: 700px;  
-}
-.main .main_body .home .home_executive_summary .home_flex img:hover,
-.win_server .aduc .aduc_flex img:hover ,.pfsense .firewall_flex img:hover,
-.interface_flex img:hover{
-    right: 15rem;
-}
 
 /* Body Section */
 
@@ -426,4 +413,5 @@ body{
 
     
 }
+
 

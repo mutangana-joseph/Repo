@@ -298,9 +298,17 @@
                                 DNS1=192.168.1.2<br>
                                 DNS2=192.168.1.3</div>
                     
-                        <h1>Wazuh Dashboar</h1>
+                        <h1>Wazuh Dashboard</h1>
                         <p>I have Agent that control Window Server</p>
                         <img src="agent.png" alt="Agent image">
+                        <h1>Wazuh Linux Docs Agent</h1>
+                        <p>
+                        <h1>Command used for Linux Agent</h1>
+                        wget https://packages.wazuh.com/4.x/apt/pool/main/w/wazuh-agent/wazuh-agent_4.14.0-1_amd64.deb && sudo
+                        WAZUH_MANAGER='192.168.1.4' WAZUH_AGENT_GROUP='Phase2_CNet' WAZUH_AGENT_NAME='Linux_Server' dpkg -i
+                        ./wazuh-agent_4.14.0-1_amd64.deb
+                        
+                        </p>
                     </div>
                     
                 
@@ -341,6 +349,15 @@
             <img src="lan1ids.png" alt="LAN1 eve json file path ">
             <h1>Suricata EVE JSON and Location of LAN2</h1>
             <img src="lan2ids.png" alt="LAN2 eve json file path">
+        </div>
+        <!--Kali Tab -->
+        <div class="kali" id="kali">
+            <h1>Kali</h1>
+            <p>
+                <h1>Coomand used for nmap scan command</h1>
+                <p>nmap -sS -Pn -T4 -p 1-65535 --open -oN nmap_scan_29061_20251206.txt 192.168.2.0/29</p>
+            </p>
+
         </div>
         <!-- Summary Tab -->
         <div class="summary" id="summary">
